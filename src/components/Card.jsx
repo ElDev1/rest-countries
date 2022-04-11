@@ -1,17 +1,15 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 
-const Card = () => {
-    const [data, setData] = useState('');
-
-    useEffect(() => {
-        fetch('https://restcountries.com/v3.1/all')
-        .then(response => response.json())
-        .then(response => setData(response));
-        console.log(data);
-    },[])  
+const Card = ({image, name, population, region, capital}) => {
 
     return (
-        <div>Card</div>
+        <div>
+            <img src={image} alt="country flag" />
+            <h2>{name}</h2>
+            <p>Population: {population}</p>
+            <p>Region: {region}</p>
+            <p>Capital: {capital}</p>
+        </div>
     )
 }
 
