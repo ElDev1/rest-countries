@@ -1,24 +1,24 @@
 import React from 'react'
 import {AiOutlineSearch} from 'react-icons/ai';
+import '../styles/search.css'
 
 const Search = () => {
   return (
-    <div>
-        <div>
+    <div className='search-container'>
+        <div className='search-input-container'>
+            <AiOutlineSearch className='search-icon'/>
             <input type="text" placeholder='search...'></input>
-            <AiOutlineSearch />
         </div>
-        <div>
+        <div className='search-filter-container'>
             <label>
-            <input list="browsers" name="myBrowser" placeholder="browser"/>
+            <input list="regions" name="myBrowser" placeholder="Filter by region"/>
             </label>
-            <datalist id="browsers">
-                <option value="Chrome" />
-                <option value="Firefox" />
-                <option value="Internet Explorer" />
-                <option value="Opera" />
-                <option value="Safari" />
-                <option value="Microsoft Edge" />
+            <datalist id="regions">
+                <option value="Africa" />
+                <option value="America" />
+                <option value="Asia" />
+                <option value="Europe" />
+                <option value="Oceania" />
             </datalist>
         </div>
         
