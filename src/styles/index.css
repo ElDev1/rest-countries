@@ -1,11 +1,30 @@
 body {
-    background-color:aliceblue;
+    background-color: #ebebeb;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     overflow-wrap: inherit;
+    transition: .3s ease all;
+}
+
+nav {
+    background-color: white;
 }
 
 img {
     height: 250px;
 }
+
+body.dark {
+    background: #00021a;
+    color: white;
+}
+
+body.dark nav{
+    background-color: #1a1a15;
+}
+
+body.dark .card{
+    background-color: #1a1a15;
+}
+
